@@ -42,7 +42,6 @@ spec:
         volumeMounts:
         - mountPath: /html
           name: html
-        restartPolicy: Always
       volumes:
       - name: nginx-conf
         configMap:
