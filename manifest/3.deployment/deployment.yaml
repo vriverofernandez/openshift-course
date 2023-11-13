@@ -16,9 +16,13 @@ spec:
       containers:
       - name: deplo
         image: nginx:1.21.5-alpine
+        imagePullPolicy: IfNotPresent
         resources:
           limits:
             memory: "64Mi"
             cpu: "100m"
+        volumeMounts:
+        - mountPath: /etc/nginx
+          name: nginx-conf
         ports:
         - containerPort: 80

@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: myconfig
+  namespace: opentest
 data:
-  nginx_version: 1.21
+  nginx_version: "1.21"
   apitoken: klajsdflkj13h4triu134t98
