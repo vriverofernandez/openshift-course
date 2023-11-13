@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig
+data:
+  nginx_version: 1.21
+  apitoken: klajsdflkj13h4triu134t98
