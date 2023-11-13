@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deplo
+  namespace: opentest
+spec:
+  selector:
+    matchLabels:
+      app: deplo
+  template:
+    metadata:
+      labels:
+        app: deplo
+    spec:
+      containers:
+      - name: deplo
+        image: nginx:1.21.5-alpine
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 80
